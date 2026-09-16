@@ -35,7 +35,8 @@ const experiences = [
     logo: '/img/logos/uwo-logo.png',
     company: 'Western University',
     role: 'Data Science Researcher',
-    mentor: 'Under the guidance of Dr. Jibran Khokhar',
+    mentor: 'Dr. Jibran Khokhar',
+    mentorHref: 'https://www.khokharlab.com/',
     period: 'May 2023 — Apr 2024',
     location: 'London, ON',
   },
@@ -165,7 +166,12 @@ export default function HomePage() {
                     <h3>{experience.company}</h3>
                     <p>{experience.role}</p>
                     {experience.mentor && (
-                      <span className="experienceMentor">{experience.mentor}</span>
+                      <span className="experienceMentor">
+                        Under the guidance of{' '}
+                        <a href={experience.mentorHref} target="_blank" rel="noreferrer">
+                          {experience.mentor} ↗
+                        </a>
+                      </span>
                     )}
                   </div>
                   <div className="experienceTime">
