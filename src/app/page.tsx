@@ -34,7 +34,8 @@ const experiences = [
   {
     logo: '/img/logos/uwo-logo.png',
     company: 'Western University',
-    role: 'Data Science Intern',
+    role: 'Data Science Researcher',
+    mentor: 'Under the guidance of Dr. Jibran Khokhar',
     period: 'May 2023 — Apr 2024',
     location: 'London, ON',
   },
@@ -163,6 +164,9 @@ export default function HomePage() {
                   <div className="experienceRole">
                     <h3>{experience.company}</h3>
                     <p>{experience.role}</p>
+                    {experience.mentor && (
+                      <span className="experienceMentor">{experience.mentor}</span>
+                    )}
                   </div>
                   <div className="experienceTime">
                     <p>{experience.period}</p>

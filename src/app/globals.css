@@ -276,6 +276,13 @@ h1 {
   font-size: 0.93rem;
 }
 
+.experienceMentor {
+  display: block;
+  margin-top: 0.18rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
 .experienceTime {
   text-align: right;
 }
