@@ -368,28 +368,75 @@ h1 {
   padding: 0 0 2rem;
 }
 
-.hackathonBodyCopy {
+.hackathonGrid {
   grid-column: 2 / -1;
-  max-width: 38rem;
-  padding-top: 0.6rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
 }
 
-.hackathonBodyCopy p {
-  margin-bottom: 0;
-  color: var(--secondary);
-  font-family: var(--serif);
-  font-size: 1.25rem;
-  line-height: 1.55;
+.hackathonCard {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr) auto;
+  gap: 0.9rem;
+  align-items: center;
+  min-height: 5.5rem;
+  padding: 0.9rem;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  transition: background 160ms ease;
 }
 
-.hackathonBodyCopy .hackathonLabel {
-  margin-bottom: 0.55rem;
-  color: var(--muted);
-  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
-  font-size: 0.68rem;
+.hackathonCard:hover,
+.hackathonCard:focus-visible {
+  background: rgb(255 255 255 / 3%);
+}
+
+.hackathonLogo {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 0.2rem;
+  background: #0f0f0f;
+}
+
+.hackathonLogo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hackathonName {
+  display: grid;
+  gap: 0.12rem;
+}
+
+.hackathonName strong {
+  font-size: 0.93rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.hackathonName > span {
+  color: var(--secondary);
+  font-size: 0.76rem;
+}
+
+.hackathonArrow {
+  color: var(--muted);
+  font-size: 0.9rem;
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.hackathonCard:hover .hackathonArrow,
+.hackathonCard:focus-visible .hackathonArrow {
+  color: var(--accent);
+  transform: translate(0.15rem, -0.15rem);
 }
 
 .aboutGrid {
@@ -574,8 +621,9 @@ h1 {
     gap: 1rem;
   }
 
-  .hackathonBodyCopy {
+  .hackathonGrid {
     grid-column: 2;
+    grid-template-columns: 1fr;
   }
 
   .aboutGrid {

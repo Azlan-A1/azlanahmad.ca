@@ -40,6 +40,29 @@ const experiences = [
   },
 ];
 
+const hackathons = [
+  {
+    name: 'ETHGlobal',
+    logo: '/img/logos/hackathons/ethglobal.png',
+    href: 'https://ethglobal.com/',
+  },
+  {
+    name: 'Hack the North',
+    logo: '/img/logos/hackathons/hack-the-north.png',
+    href: 'https://hackthenorth.com/',
+  },
+  {
+    name: 'SpurHacks',
+    logo: '/img/logos/hackathons/spurhacks.jpg',
+    href: 'https://spurhacks.com/',
+  },
+  {
+    name: 'EasyA × Consensus Toronto',
+    logo: '/img/logos/hackathons/easya.png',
+    href: 'https://www.easya.io/events/easya-consensus-toronto-hackathon',
+  },
+];
+
 const skills = [
   ['Languages', 'Python, SQL, R, Java, JavaScript, TypeScript'],
   ['Machine learning', 'PyTorch, TensorFlow, XGBoost, LightGBM, scikit-learn'],
@@ -156,7 +179,7 @@ export default function HomePage() {
                 </span>
                 <span className="hackathonSummaryCopy">
                   <strong>Hackathons</strong>
-                  <span>Build weekends, rapid prototypes, and team wins</span>
+                  <span>Four events · Selected experiences</span>
                 </span>
                 <span className="hackathonAction">
                   <span>Explore</span>
@@ -164,12 +187,33 @@ export default function HomePage() {
                 </span>
               </summary>
               <div className="hackathonBody">
-                <div className="hackathonBodyCopy">
-                  <p className="hackathonLabel">Archive in progress</p>
-                  <p>
-                    Event write-ups, projects, results, and demos will live here as the archive
-                    grows.
-                  </p>
+                <div className="hackathonGrid">
+                  {hackathons.map((hackathon) => (
+                    <a
+                      className="hackathonCard"
+                      href={hackathon.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      key={hackathon.name}
+                    >
+                      <span className="hackathonLogo">
+                        <Image
+                          src={hackathon.logo}
+                          alt=""
+                          width={48}
+                          height={48}
+                          sizes="48px"
+                        />
+                      </span>
+                      <span className="hackathonName">
+                        <strong>{hackathon.name}</strong>
+                        <span>Hackathon experience</span>
+                      </span>
+                      <span className="hackathonArrow" aria-hidden="true">
+                        ↗
+                      </span>
+                    </a>
+                  ))}
                 </div>
               </div>
             </details>
