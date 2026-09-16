@@ -86,6 +86,7 @@ export default function HomePage() {
 
           <nav className="desktopNav" aria-label="Primary navigation">
             <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
             <a href="#about">About</a>
             <a href="/resume.pdf" target="_blank" rel="noreferrer">
               Résumé ↗
@@ -96,6 +97,7 @@ export default function HomePage() {
             <summary>Menu</summary>
             <nav aria-label="Mobile navigation">
               <a href="#experience">Experience</a>
+              <a href="#projects">Projects</a>
               <a href="#about">About</a>
               <a href="#contact">Contact</a>
               <a href="/resume.pdf" target="_blank" rel="noreferrer">
@@ -227,6 +229,29 @@ export default function HomePage() {
                 </div>
               </div>
             </details>
+          </section>
+
+          <section className="contentSection" id="projects" aria-labelledby="projects-title">
+            <div className="sectionHeader">
+              <h2 id="projects-title">Projects</h2>
+              <span>GitHub archive</span>
+            </div>
+
+            <a
+              className="projectArchive"
+              href="https://github.com/Azlan-A1?tab=repositories"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="projectArchiveCopy">
+                <span className="projectArchiveLabel">Selected work</span>
+                <strong>Browse the build archive.</strong>
+                <span>
+                  Data products, machine learning experiments, and software tools—all in one place.
+                </span>
+              </span>
+              <span className="projectArchiveAction">View on GitHub ↗</span>
+            </a>
           </section>
 
           <section className="contentSection" id="about" aria-labelledby="about-title">

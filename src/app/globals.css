@@ -460,6 +460,68 @@ h1 {
   transform: translate(0.15rem, -0.15rem);
 }
 
+.projectArchive {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 3rem;
+  align-items: end;
+  padding: clamp(1.75rem, 4vw, 3rem);
+  border: 1px solid var(--line);
+  background: rgb(255 255 255 / 1.5%);
+  transition: background 180ms ease, border-color 180ms ease;
+}
+
+.projectArchive:hover,
+.projectArchive:focus-visible {
+  border-color: rgb(184 200 255 / 42%);
+  background: rgb(255 255 255 / 3.5%);
+}
+
+.projectArchiveCopy {
+  display: grid;
+  max-width: 42rem;
+}
+
+.projectArchiveLabel {
+  margin-bottom: 1.4rem;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.projectArchiveCopy strong {
+  margin-bottom: 0.8rem;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.projectArchiveCopy > span:last-child {
+  max-width: 36rem;
+  color: var(--secondary);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.projectArchiveAction {
+  padding-bottom: 0.15rem;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+  font-size: 0.82rem;
+  white-space: nowrap;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+
+.projectArchive:hover .projectArchiveAction,
+.projectArchive:focus-visible .projectArchiveAction {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
 .aboutGrid {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(16rem, 0.6fr);
@@ -645,6 +707,16 @@ h1 {
   .hackathonGrid {
     grid-column: 2;
     grid-template-columns: 1fr;
+  }
+
+  .projectArchive {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .projectArchiveAction {
+    width: max-content;
   }
 
   .aboutGrid {
