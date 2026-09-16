@@ -6,6 +6,7 @@ const experiences = [
   {
     logo: '/img/logos/esa-logo.svg',
     company: 'Electrical Safety Authority',
+    website: 'https://esasafe.com/',
     role: 'Data Science Intern',
     period: 'Sep 2025 — Present',
     location: 'Mississauga, ON',
@@ -13,6 +14,7 @@ const experiences = [
   {
     logo: '/img/logos/brucepower-logo.png',
     company: 'Bruce Power',
+    website: 'https://www.brucepower.com/',
     role: 'Data Science Intern',
     period: 'Sep 2024 — Apr 2025',
     location: 'Tiverton, ON',
@@ -20,6 +22,7 @@ const experiences = [
   {
     logo: '/img/logos/dartmouth-logo.png',
     company: 'Dartmouth College',
+    website: 'https://home.dartmouth.edu/',
     role: 'Data Engineering & BI Intern',
     period: 'May 2024 — Aug 2024',
     location: 'Hanover, NH',
@@ -27,6 +30,7 @@ const experiences = [
   {
     logo: '/img/logos/uoft-logo.png',
     company: 'University of Toronto',
+    website: 'https://www.utoronto.ca/',
     role: 'Machine Learning Engineer Intern',
     period: 'Jan 2024 — Apr 2024',
     location: 'Toronto, ON',
@@ -34,6 +38,7 @@ const experiences = [
   {
     logo: '/img/logos/uwo-logo.png',
     company: 'Western University',
+    website: 'https://www.uwo.ca/',
     role: 'Data Science Researcher',
     mentor: 'Dr. Jibran Khokhar',
     mentorHref: 'https://www.khokharlab.com/',
@@ -165,7 +170,12 @@ export default function HomePage() {
                     />
                   </div>
                   <div className="experienceRole">
-                    <h3>{experience.company}</h3>
+                    <h3>
+                      <a href={experience.website} target="_blank" rel="noreferrer">
+                        {experience.company}
+                        <span aria-hidden="true">↗</span>
+                      </a>
+                    </h3>
                     <p>{experience.role}</p>
                     {experience.mentor && (
                       <span className="experienceMentor">

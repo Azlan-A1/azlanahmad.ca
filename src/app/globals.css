@@ -269,6 +269,31 @@ h1 {
   font-weight: 600;
 }
 
+.experienceRole h3 a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  transition: color 160ms ease;
+}
+
+.experienceRole h3 a span {
+  color: var(--muted);
+  font-size: 0.72rem;
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.experienceRole h3 a:hover,
+.experienceRole h3 a:focus-visible,
+.experienceRole h3 a:hover span,
+.experienceRole h3 a:focus-visible span {
+  color: var(--accent);
+}
+
+.experienceRole h3 a:hover span,
+.experienceRole h3 a:focus-visible span {
+  transform: translate(0.12rem, -0.12rem);
+}
+
 .experienceRole p,
 .experienceTime p {
   margin-bottom: 0;
