@@ -4,3 +4,6 @@ The site presents Azlan's background, capabilities, résumé, and contact links 
 
 
 Looking to add research work, types of project that i've done, YT channel explaining my work, offers that I have received as well even though I haven't accepted them. 
+
+
+Projects: Bring prescriptive model 
