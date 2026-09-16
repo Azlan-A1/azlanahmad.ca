@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { FaGithub, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6';
-import { HiOutlineEnvelope } from 'react-icons/hi2';
+import { HiOutlineChevronDown, HiOutlineEnvelope, HiOutlineTrophy } from 'react-icons/hi2';
 
 const experiences = [
   {
@@ -148,6 +148,31 @@ export default function HomePage() {
                 </article>
               ))}
             </div>
+
+            <details className="hackathonDropdown">
+              <summary>
+                <span className="hackathonMark" aria-hidden="true">
+                  <HiOutlineTrophy />
+                </span>
+                <span className="hackathonSummaryCopy">
+                  <strong>Hackathons</strong>
+                  <span>Build weekends, rapid prototypes, and team wins</span>
+                </span>
+                <span className="hackathonAction">
+                  <span>Explore</span>
+                  <HiOutlineChevronDown aria-hidden="true" />
+                </span>
+              </summary>
+              <div className="hackathonBody">
+                <div className="hackathonBodyCopy">
+                  <p className="hackathonLabel">Archive in progress</p>
+                  <p>
+                    Event write-ups, projects, results, and demos will live here as the archive
+                    grows.
+                  </p>
+                </div>
+              </div>
+            </details>
           </section>
 
           <section className="contentSection" id="about" aria-labelledby="about-title">

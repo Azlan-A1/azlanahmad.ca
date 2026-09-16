@@ -285,6 +285,113 @@ h1 {
   font-size: 0.78rem;
 }
 
+.hackathonDropdown {
+  margin-top: 2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.hackathonDropdown summary {
+  display: grid;
+  grid-template-columns: 3.25rem minmax(0, 1fr) auto;
+  gap: 1.25rem;
+  align-items: center;
+  min-height: 6.2rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+  cursor: pointer;
+  list-style: none;
+  transition: background 160ms ease, padding 160ms ease;
+}
+
+.hackathonDropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.hackathonDropdown summary:hover {
+  margin-inline: -1rem;
+  padding-inline: 1rem;
+  background: rgb(255 255 255 / 2.5%);
+}
+
+.hackathonMark {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  color: var(--accent);
+  border: 1px solid var(--line);
+  border-radius: 0.2rem;
+}
+
+.hackathonMark svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.hackathonSummaryCopy {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.hackathonSummaryCopy strong {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.hackathonSummaryCopy > span {
+  color: var(--secondary);
+  font-size: 0.93rem;
+}
+
+.hackathonAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.hackathonAction svg {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 180ms ease;
+}
+
+.hackathonDropdown[open] .hackathonAction svg {
+  transform: rotate(180deg);
+}
+
+.hackathonBody {
+  display: grid;
+  grid-template-columns: 3.25rem minmax(0, 1fr) auto;
+  gap: 1.25rem;
+  padding: 0 0 2rem;
+}
+
+.hackathonBodyCopy {
+  grid-column: 2 / -1;
+  max-width: 38rem;
+  padding-top: 0.6rem;
+}
+
+.hackathonBodyCopy p {
+  margin-bottom: 0;
+  color: var(--secondary);
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  line-height: 1.55;
+}
+
+.hackathonBodyCopy .hackathonLabel {
+  margin-bottom: 0.55rem;
+  color: var(--muted);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 .aboutGrid {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(16rem, 0.6fr);
@@ -451,6 +558,24 @@ h1 {
   .experienceTime {
     grid-column: 2;
     text-align: left;
+  }
+
+  .hackathonDropdown summary {
+    grid-template-columns: 3rem minmax(0, 1fr) auto;
+    gap: 1rem;
+  }
+
+  .hackathonAction > span {
+    display: none;
+  }
+
+  .hackathonBody {
+    grid-template-columns: 3rem minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .hackathonBodyCopy {
+    grid-column: 2;
   }
 
   .aboutGrid {
