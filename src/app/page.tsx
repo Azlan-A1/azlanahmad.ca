@@ -70,6 +70,14 @@ const hackathons = [
   },
 ];
 
+const offers = [
+  {
+    company: 'Mackenzie Investments',
+    logo: '/img/logos/mackenzie-logo.svg',
+    href: 'https://www.mackenzieinvestments.com/',
+  },
+];
+
 const skills = [
   ['Languages', 'Python, SQL, R, Java, JavaScript, TypeScript'],
   ['Machine learning', 'PyTorch, TensorFlow, XGBoost, LightGBM, scikit-learn'],
@@ -239,6 +247,36 @@ export default function HomePage() {
                 </div>
               </div>
             </details>
+          </section>
+
+          <section className="contentSection" id="offers" aria-labelledby="offers-title">
+            <div className="sectionHeader">
+              <h2 id="offers-title">Offers</h2>
+              <span>Career milestones</span>
+            </div>
+
+            <div className="offerList">
+              {offers.map((offer) => (
+                <a
+                  className="offerRow"
+                  href={offer.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={offer.company}
+                >
+                  <span className="offerMark">
+                    <Image src={offer.logo} alt="" width={151} height={28} sizes="151px" />
+                  </span>
+                  <span className="offerCopy">
+                    <strong>{offer.company}</strong>
+                    <span>Offer received</span>
+                  </span>
+                  <span className="offerArrow" aria-hidden="true">
+                    ↗
+                  </span>
+                </a>
+              ))}
+            </div>
           </section>
 
           <section className="contentSection" id="projects" aria-labelledby="projects-title">

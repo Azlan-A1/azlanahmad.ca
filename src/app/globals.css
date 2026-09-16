@@ -485,6 +485,72 @@ h1 {
   transform: translate(0.15rem, -0.15rem);
 }
 
+.offerList {
+  border-top: 1px solid var(--line);
+}
+
+.offerRow {
+  display: grid;
+  grid-template-columns: 3.25rem minmax(0, 1fr) auto;
+  gap: 1.25rem;
+  align-items: center;
+  min-height: 6.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+  transition: background 160ms ease, padding 160ms ease;
+}
+
+.offerRow:hover,
+.offerRow:focus-visible {
+  margin-inline: -1rem;
+  padding-inline: 1rem;
+  background: rgb(255 255 255 / 2.5%);
+}
+
+.offerMark {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 0.2rem;
+  background: #f3f4f6;
+}
+
+.offerMark img {
+  display: block;
+  width: auto;
+  max-width: none;
+  height: 2rem;
+  margin-top: 0.5rem;
+}
+
+.offerCopy {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.offerCopy strong {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.offerCopy > span {
+  color: var(--secondary);
+  font-size: 0.88rem;
+}
+
+.offerArrow {
+  color: var(--muted);
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.offerRow:hover .offerArrow,
+.offerRow:focus-visible .offerArrow {
+  color: var(--accent);
+  transform: translate(0.15rem, -0.15rem);
+}
+
 .projectArchive {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
