@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { FaGithub, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6';
+import { HiOutlineEnvelope } from 'react-icons/hi2';
 
 const experiences = [
   {
@@ -98,12 +100,21 @@ export default function HomePage() {
               </p>
               <div className="introLinks" aria-label="Profile links">
                 <a href="https://github.com/Azlan-A1" target="_blank" rel="noreferrer">
-                  GitHub ↗
+                  <FaGithub aria-hidden="true" />
+                  <span>GitHub</span>
                 </a>
                 <a href="https://www.linkedin.com/in/azlan-ahmad-/" target="_blank" rel="noreferrer">
-                  LinkedIn ↗
+                  <FaLinkedinIn aria-hidden="true" />
+                  <span>LinkedIn</span>
                 </a>
-                <a href="mailto:aahma232@uwo.ca">Email ↗</a>
+                <a href="https://x.com/azlanahmad__" target="_blank" rel="noreferrer">
+                  <FaXTwitter aria-hidden="true" />
+                  <span>X</span>
+                </a>
+                <a href="mailto:aahma232@uwo.ca">
+                  <HiOutlineEnvelope aria-hidden="true" />
+                  <span>Email</span>
+                </a>
               </div>
             </div>
           </section>
