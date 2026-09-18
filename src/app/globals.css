@@ -613,6 +613,115 @@ h1 {
   border-color: var(--accent);
 }
 
+.featuredProject {
+  display: block;
+  margin-bottom: 1.5rem;
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  border: 1px solid var(--line);
+  background: rgb(255 255 255 / 1.5%);
+  transition: background 180ms ease, border-color 180ms ease;
+}
+
+.featuredProject:hover,
+.featuredProject:focus-visible {
+  border-color: rgb(184 200 255 / 42%);
+  background: rgb(255 255 255 / 3.5%);
+}
+
+.featuredProjectHead {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: baseline;
+  margin-bottom: 1.15rem;
+}
+
+.featuredProjectLabel {
+  display: block;
+  margin-bottom: 1.1rem;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.featuredProjectTitle {
+  display: block;
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 2.9vw, 2.35rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.featuredProjectAction {
+  padding-bottom: 0.15rem;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+  font-size: 0.82rem;
+  white-space: nowrap;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+
+.featuredProject:hover .featuredProjectAction,
+.featuredProject:focus-visible .featuredProjectAction {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.featuredProjectCopy {
+  max-width: 44rem;
+  margin: 0 0 1.75rem;
+  color: var(--secondary);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.featuredProjectMetrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  padding: 1.35rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.featuredProjectMetric {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.featuredProjectMetric strong {
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 2.3vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.featuredProjectMetric span {
+  color: var(--muted);
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+}
+
+.featuredProjectStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.featuredProjectStack span {
+  padding: 0.3rem 0.65rem;
+  color: var(--secondary);
+  border: 1px solid var(--line);
+  border-radius: 0.2rem;
+  font-size: 0.76rem;
+  line-height: 1.35;
+}
+
 .aboutGrid {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(16rem, 0.6fr);
@@ -808,6 +917,20 @@ h1 {
 
   .projectArchiveAction {
     width: max-content;
+  }
+
+  .featuredProjectHead {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+
+  .featuredProjectAction {
+    width: max-content;
+  }
+
+  .featuredProjectMetrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.35rem 1.25rem;
   }
 
   .aboutGrid {

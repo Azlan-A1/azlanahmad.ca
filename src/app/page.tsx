@@ -78,6 +78,31 @@ const offers = [
   },
 ];
 
+const featuredProjects = [
+  {
+    label: 'Featured project',
+    title: 'EV charging gap model',
+    href: 'https://github.com/Azlan-A1/Azlan-A1-ev-charging-gap-model',
+    description:
+      'A two-stage hurdle model that finds Canadian cities short of fast DC charging, then sizes the shortfall. A prescriptive layer turns each predicted gap into charger counts, urgency tiers and costs, and a mixed-integer solver picks the highest-impact sites that fit a fixed capital budget.',
+    metrics: [
+      { value: '2,982', label: 'Cities scored' },
+      { value: '1,032', label: 'Chargers prescribed' },
+      { value: '20', label: 'Models per stage' },
+      { value: '0.96', label: 'Holdout R²' },
+    ],
+    stack: [
+      'R',
+      'tidymodels',
+      'SHAP',
+      'Shiny',
+      'MILP / GLPK',
+      'deck.gl',
+      'Python',
+    ],
+  },
+];
+
 const skills = [
   ['Languages', 'Python, SQL, R, Java, JavaScript, TypeScript'],
   ['Machine learning', 'PyTorch, TensorFlow, XGBoost, LightGBM, scikit-learn'],
@@ -284,6 +309,41 @@ export default function HomePage() {
               <h2 id="projects-title">Projects</h2>
               <span>GitHub archive</span>
             </div>
+
+            {featuredProjects.map((project) => (
+              <a
+                className="featuredProject"
+                href={project.href}
+                target="_blank"
+                rel="noreferrer"
+                key={project.title}
+              >
+                <span className="featuredProjectHead">
+                  <span>
+                    <span className="featuredProjectLabel">{project.label}</span>
+                    <span className="featuredProjectTitle">{project.title}</span>
+                  </span>
+                  <span className="featuredProjectAction">View repository ↗</span>
+                </span>
+
+                <p className="featuredProjectCopy">{project.description}</p>
+
+                <span className="featuredProjectMetrics">
+                  {project.metrics.map((metric) => (
+                    <span className="featuredProjectMetric" key={metric.label}>
+                      <strong>{metric.value}</strong>
+                      <span>{metric.label}</span>
+                    </span>
+                  ))}
+                </span>
+
+                <span className="featuredProjectStack">
+                  {project.stack.map((tool) => (
+                    <span key={tool}>{tool}</span>
+                  ))}
+                </span>
+              </a>
+            ))}
 
             <a
               className="projectArchive"
