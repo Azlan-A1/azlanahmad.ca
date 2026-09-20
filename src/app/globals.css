@@ -680,7 +680,7 @@ h1 {
 
 .featuredProjectShots {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.46fr);
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   gap: 0.75rem;
   align-items: start;
   margin-bottom: 1.75rem;

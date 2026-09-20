@@ -144,6 +144,26 @@ const featuredProjects = [
       'deck.gl',
       'Python',
     ],
+    images: [
+      {
+        src: '/img/projects/ev-charging/top-cities.jpg',
+        alt: 'Top 20 Canadian cities ranked by predicted fast-charging deficit, led by Montréal at +165 chargers',
+        width: 1400,
+        height: 969,
+      },
+      {
+        src: '/img/projects/ev-charging/urgency-tiers.jpg',
+        alt: 'Urgency tier distribution across 326 gap cities: 45 critical, 29 high priority, 87 moderate, 165 low',
+        width: 1400,
+        height: 840,
+      },
+      {
+        src: '/img/projects/ev-charging/shap.jpg',
+        alt: 'SHAP summaries for the classification and regression stages, with station count the dominant feature',
+        width: 1400,
+        height: 700,
+      },
+    ],
   },
 ];
 
