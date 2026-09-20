@@ -80,6 +80,50 @@ const offers = [
 
 const featuredProjects = [
   {
+    label: 'Hack the North 2026 · Solana track',
+    title: 'Chalk Chain',
+    href: 'https://github.com/Azlan-A1/chalk-chain',
+    description:
+      "Teacher absence runs near one in four in parts of the world, and paying teachers for days they can prove they taught is known to cut it — but the proof gets faked, because a photo carries no trustworthy timestamp. Chalk Chain turns a live Solana block into three words the teacher chalks on the board before photographing the class. A Solana program, not a server, checks the photo was sealed within 150 seconds of those words existing; surprise re-checks timed by future block hashes extend a hash chain written in chalk; a vision model reads the board, and each verified photo pays a USDC bonus that anyone can audit.",
+    metrics: [
+      { value: '9', label: 'On-chain instructions' },
+      { value: '175', label: 'Tests, 40 end-to-end' },
+      { value: '3 / 3', label: 'Staged cheats rejected' },
+      { value: '<$0.001', label: 'To verify and pay a day' },
+    ],
+    stack: [
+      'Rust',
+      'Anchor',
+      'Solana',
+      'TypeScript',
+      '@solana/kit',
+      'React',
+      'Python',
+      'FastAPI',
+      'Vision LLM',
+    ],
+    images: [
+      {
+        src: '/img/projects/chalk-chain/cover.jpg',
+        alt: 'Three words drawn from a Solana block, chalked on a board',
+        width: 1400,
+        height: 788,
+      },
+      {
+        src: '/img/projects/chalk-chain/proof.jpg',
+        alt: 'Public proof page showing a day of verified photos and the USDC bonus paid',
+        width: 1400,
+        height: 962,
+      },
+      {
+        src: '/img/projects/chalk-chain/phone.jpg',
+        alt: 'The teacher app on a phone, showing each photo and which checks passed',
+        width: 700,
+        height: 1246,
+      },
+    ],
+  },
+  {
     label: 'Featured project',
     title: 'EV charging gap model',
     href: 'https://github.com/Azlan-A1/Azlan-A1-ev-charging-gap-model',
@@ -327,6 +371,22 @@ export default function HomePage() {
                 </span>
 
                 <p className="featuredProjectCopy">{project.description}</p>
+
+                {project.images && (
+                  <span className="featuredProjectShots">
+                    {project.images.map((shot) => (
+                      <span className="featuredProjectShot" key={shot.src}>
+                        <Image
+                          src={shot.src}
+                          alt={shot.alt}
+                          width={shot.width}
+                          height={shot.height}
+                          sizes="(max-width: 760px) 100vw, 33vw"
+                        />
+                      </span>
+                    ))}
+                  </span>
+                )}
 
                 <span className="featuredProjectMetrics">
                   {project.metrics.map((metric) => (
