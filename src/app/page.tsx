@@ -1,6 +1,56 @@
 import Image from 'next/image';
 import { FaGithub, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6';
-import { HiOutlineChevronDown, HiOutlineEnvelope, HiOutlineTrophy } from 'react-icons/hi2';
+import {
+  HiOutlineChartBar,
+  HiOutlineChevronDown,
+  HiOutlineEnvelope,
+  HiOutlineEye,
+  HiOutlineGlobeAlt,
+  HiOutlineLink,
+  HiOutlineTrophy,
+  HiOutlineVariable,
+} from 'react-icons/hi2';
+import {
+  SiFastapi,
+  SiPython,
+  SiR,
+  SiReact,
+  SiRstudio,
+  SiRust,
+  SiTidyverse,
+  SiTypescript,
+} from 'react-icons/si';
+
+/** Solana has no glyph in react-icons; this is its three-bar mark, drawn to match the tag text. */
+function SolanaMark() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path
+        fill="currentColor"
+        d="M6.9 4.6a1 1 0 0 1 .7-.3h14.1a.6.6 0 0 1 .43 1L19.7 7.7a1 1 0 0 1-.7.3H4.9a.6.6 0 0 1-.43-1L6.9 4.6Zm10.2 5.7a1 1 0 0 0-.7-.3H2.3a.6.6 0 0 0-.43 1l2.43 2.4a1 1 0 0 0 .7.3h14.1a.6.6 0 0 0 .43-1l-2.43-2.4Zm-10.2 5.4a1 1 0 0 1 .7-.3h14.1a.6.6 0 0 1 .43 1L19.7 19.4a1 1 0 0 1-.7.3H4.9a.6.6 0 0 1-.43-1l2.43-3Z"
+      />
+    </svg>
+  );
+}
+
+/** Icons shown beside the stack tags. Tools with no recognisable mark get a neutral glyph. */
+const stackIcons: Record<string, React.ReactNode> = {
+  Rust: <SiRust />,
+  Anchor: <HiOutlineLink />,
+  Solana: <SolanaMark />,
+  '@solana/kit': <SolanaMark />,
+  TypeScript: <SiTypescript />,
+  React: <SiReact />,
+  Python: <SiPython />,
+  FastAPI: <SiFastapi />,
+  'Vision LLM': <HiOutlineEye />,
+  R: <SiR />,
+  tidymodels: <SiTidyverse />,
+  SHAP: <HiOutlineChartBar />,
+  Shiny: <SiRstudio />,
+  'MILP / GLPK': <HiOutlineVariable />,
+  'deck.gl': <HiOutlineGlobeAlt />,
+};
 
 const experiences = [
   {
@@ -419,7 +469,14 @@ export default function HomePage() {
 
                 <span className="featuredProjectStack">
                   {project.stack.map((tool) => (
-                    <span key={tool}>{tool}</span>
+                    <span key={tool}>
+                      {stackIcons[tool] && (
+                        <span className="featuredProjectStackIcon" aria-hidden="true">
+                          {stackIcons[tool]}
+                        </span>
+                      )}
+                      {tool}
+                    </span>
                   ))}
                 </span>
               </a>
