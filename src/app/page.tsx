@@ -256,6 +256,7 @@ export default function HomePage() {
 
           <nav className="desktopNav" aria-label="Primary navigation">
             <a href="#experience">Experience</a>
+            <a href="#competitions">Competitions</a>
             <a href="#projects">Projects</a>
             <a href="#about">About</a>
             <a href="/resume.pdf" target="_blank" rel="noreferrer">
@@ -267,6 +268,7 @@ export default function HomePage() {
             <summary>Menu</summary>
             <nav aria-label="Mobile navigation">
               <a href="#experience">Experience</a>
+              <a href="#competitions">Competitions</a>
               <a href="#projects">Projects</a>
               <a href="#about">About</a>
               <a href="#contact">Contact</a>
