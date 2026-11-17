@@ -58,7 +58,7 @@ const experiences = [
     company: 'Electrical Safety Authority',
     website: 'https://esasafe.com/',
     role: 'Data Science Intern',
-    period: 'Sep 2025 — Present',
+    period: 'Sep 2025 — Aug 2026',
     location: 'Mississauga, ON',
   },
   {
@@ -89,7 +89,7 @@ const experiences = [
     logo: '/img/logos/uwo-logo.png',
     company: 'Western University',
     website: 'https://www.uwo.ca/',
-    role: 'Data Science Researcher',
+    role: 'Data Science Intern',
     mentor: 'Dr. Jibran Khokhar',
     mentorHref: 'https://www.khokharlab.com/',
     period: 'May 2023 — Apr 2024',
@@ -218,9 +218,15 @@ const featuredProjects = [
 ];
 
 const skills = [
-  ['Languages', 'Python, SQL, R, Java, JavaScript, TypeScript'],
-  ['Machine learning', 'PyTorch, TensorFlow, XGBoost, LightGBM, scikit-learn'],
-  ['Data systems', 'Spark, BigQuery, Redshift, PostgreSQL, Snowflake'],
+  ['Languages & tools', 'Python, SQL, R, Java, C++, Git, Docker, FastAPI, MLflow'],
+  [
+    'Machine learning',
+    'scikit-learn, XGBoost, LightGBM, PyTorch, TensorFlow, tidymodels, SHAP, LangChain',
+  ],
+  [
+    'Data & cloud',
+    'PySpark, PostgreSQL, Snowflake, AWS (Redshift, S3), GCP (BigQuery), Azure, Tableau',
+  ],
 ];
 
 export default function HomePage() {
@@ -271,7 +277,7 @@ export default function HomePage() {
                 <a href="https://www.uwo.ca/" target="_blank" rel="noreferrer">
                   Western University
                 </a>
-                , currently working in data science at the{' '}
+                . Most recently, I spent a year doing data science at the{' '}
                 <a href="https://esasafe.com/" target="_blank" rel="noreferrer">
                   Electrical Safety Authority
                 </a>
@@ -301,7 +307,7 @@ export default function HomePage() {
           <section className="contentSection" id="experience" aria-labelledby="experience-title">
             <div className="sectionHeader">
               <h2 id="experience-title">Experience</h2>
-              <span>2023 — Present</span>
+              <span>2023 — 2026</span>
             </div>
 
             <div className="experienceList">
