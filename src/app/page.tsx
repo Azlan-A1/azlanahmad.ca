@@ -12,6 +12,7 @@ import {
 } from 'react-icons/hi2';
 import {
   SiFastapi,
+  SiKaggle,
   SiPython,
   SiR,
   SiReact,
@@ -125,6 +126,17 @@ const offers = [
     company: 'Mackenzie Investments',
     logo: '/img/logos/mackenzie-logo.svg',
     href: 'https://www.mackenzieinvestments.com/',
+  },
+];
+
+const competitions = [
+  {
+    name: 'Gemma 4 Developer Agent Competition',
+    host: 'Google · Kaggle',
+    icon: <SiKaggle />,
+    href: 'https://www.kaggle.com/competitions/gemma-4-developer-agent',
+    detail: 'Building a Gemma 4 coding agent that fixes real software issues',
+    status: 'In progress · Results Dec 2026',
   },
 ];
 
@@ -419,6 +431,40 @@ export default function HomePage() {
                   <span className="offerArrow" aria-hidden="true">
                     ↗
                   </span>
+                </a>
+              ))}
+            </div>
+          </section>
+
+          <section
+            className="contentSection"
+            id="competitions"
+            aria-labelledby="competitions-title"
+          >
+            <div className="sectionHeader">
+              <h2 id="competitions-title">Competitions</h2>
+              <span>Data science &amp; ML</span>
+            </div>
+
+            <div className="offerList">
+              {competitions.map((competition) => (
+                <a
+                  className="offerRow"
+                  href={competition.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={competition.name}
+                >
+                  <span className="competitionMark" aria-hidden="true">
+                    {competition.icon}
+                  </span>
+                  <span className="offerCopy">
+                    <strong>{competition.name}</strong>
+                    <span>
+                      {competition.host} · {competition.detail}
+                    </span>
+                  </span>
+                  <span className="competitionStatus">{competition.status}</span>
                 </a>
               ))}
             </div>
